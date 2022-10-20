@@ -26,7 +26,7 @@
  * CONSTANTS
  **************************************************************************************/
 
-static uint32_t const W25Q16DV_MAX_SPI_CLK = 5 * 1000 * 1000; /* 104 MHz */
+static uint32_t const W25Q16DV_MAX_SPI_CLK = 5 * 1000 * 1000; /* 5 MHz */
 static SPISettings const W25Q16DV_SPI_SETTINGS{W25Q16DV_MAX_SPI_CLK, MSBFIRST, SPI_MODE0};
 
 /**************************************************************************************
