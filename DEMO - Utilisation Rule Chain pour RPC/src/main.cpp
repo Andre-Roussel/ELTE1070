@@ -1,12 +1,12 @@
+
 /*
-  Titre      : DEMO - RPC Blink
+  Titre      : DEMO - Rule Chain pour RPC
   Auteur     : André Roussel
-  Date       : 20/10/2022
-  Description: Démonstration de l'abonement a un message MQTT (RPC) et son affichage dans le moniteur série
+  Date       : 21/10/2022
+  Description: Démonstration de l'utilisation d'un rule chain pour RPC a un uC
   Droits     : Reproduction permise pour usage pédagogique
   Version    : 0.0.1
 */
-
 
 
 #include <Arduino.h>
@@ -16,7 +16,7 @@ int Intensite =0;
 #include "WIFI_NINA_Connector.h"
 #include "MQTTConnector.h"
 const int LED_PIN =2;
-
+int temperature = 20;
 
 void setup() {
   // put your setup code here, to run once:
@@ -30,14 +30,37 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   ClientMQTT.loop(); 
+  
+  
   if (LedStatus)
   {
-    analogWrite(LED_PIN,Intensite*400/100);
+    digitalWrite(LED_PIN,HIGH);
    
   }
   else
   {
-    analogWrite(LED_PIN,0);
+    digitalWrite(LED_PIN, LOW);
   }
+  
+
+  
+  
+  if(temperature == 20)
+  {
+    temperature = 25;
+    appendPayload("temperature", temperature);
+    sendPayload();
+    Serial.println(temperature);
+  }
+  else
+  {
+    temperature =20;
+    appendPayload("temperature", temperature);
+    sendPayload();
+    Serial.println(temperature);
+  }
+
+  delay(5000);
+
   
 }

@@ -38,39 +38,20 @@ void messageReceived(String &topic, String &payload) {
   Serial.println(topic);
   
   Serial.println(payload.substring(11,12));
-
-  if(payload.substring(11,12)=="I")
-  {
-    /*
-    Serial.println("Intensite");
-    Serial.println(payload.substring(31,35));
-    */
-    Intensite = payload.substring(31,35).toInt();
-  }
-  else
-  {
-    /*
+  Serial.println(payload.substring(28,29));
     Serial.println("Status");
-    */
+    
     if(payload.substring(28,29)=="t")
     {
+      Serial.println("High");
       LedStatus=true;
     }
     else
     {
+      Serial.println("LOW");
       LedStatus=false;
     }
-  }
-
-  /*
-  tempDelay = payload.substring(30,payload.length() -1).toInt();
-  Serial.println(tempDelay);
-  ledDelay = -tempDelay + 1000;
-  
-  Serial.println("Message received");
-  Serial.print("Led delay is : ");
-  Serial.println(ledDelay);
-  */
+    
 }
 
 

@@ -30,19 +30,10 @@ Modifier les paramètre WIFI pour le réseau auquels votre objets doit se branch
 
 //  Uncoment to use demo open network
 
-/*  #define WIFI_SECRET_SSID "IDO"
+    #define WIFI_SECRET_SSID "IDO"
     #define WIFI_SECRET_USER ""
     #define WIFI_SECRET_PASS "99Bidules!"
     #define SECRET_MQTT_SERVER_IP "192.168.1.199"
-*/
-
-
-//  Uncoment to use demo open network
-
-    #define WIFI_SECRET_SSID "IDO2"
-    #define WIFI_SECRET_USER ""
-    #define WIFI_SECRET_PASS "99Bidules!"
-    #define SECRET_MQTT_SERVER_IP "192.168.2.199"
 
 
 
