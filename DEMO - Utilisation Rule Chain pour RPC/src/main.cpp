@@ -47,17 +47,19 @@ void loop() {
   
   if(temperature == 20)
   {
-    temperature = 25;
+    
     appendPayload("temperature", temperature);
     sendPayload();
     Serial.println(temperature);
+    temperature = 25;
   }
   else
   {
-    temperature =20;
+    
     appendPayload("temperature", temperature);
     sendPayload();
     Serial.println(temperature);
+    temperature =20;
   }
 
   delay(5000);
