@@ -45,25 +45,29 @@ String BuildMQTTString(DateTime myTimeStamp, float Temperature, float Humidity)
 {
 
 
-    char TimeStampString[25] ="";
+    //char TimeStampString[25] ="";
 
     //Updated now.day to now.date
-    sprintf(TimeStampString, "D%02d%02d%02dT%02d%02d%02d",  myTimeStamp.year(), myTimeStamp.month(), myTimeStamp.day(), myTimeStamp.hour(), myTimeStamp.minute(), myTimeStamp.second()); 
+    //sprintf(TimeStampString, "D%02d%02d%02dT%02d%02d%02d",  myTimeStamp.year(), myTimeStamp.month(), myTimeStamp.day(), myTimeStamp.hour(), myTimeStamp.minute(), myTimeStamp.second()); 
 
     // make a string for assembling the data to log:
-    String tempString = "{\"";
-
-   
-  
     char tempValue[10] ="";
     char humValue[10] = "";
 
     sprintf(tempValue,"%f",Temperature);
     sprintf(humValue,"%f",Humidity);
-    tempString += "ObjectUnixTime";
+
+
+    unsigned long int ts = (unsigned int) rtc.now().unixtime()+10800;
+    
+    //sprintf(TimeStampString,"%lu",UnixTS*1000);
+
+    String tempString = "{\"";
+    tempString += "ts";
     tempString += "\":";
-    tempString += rtc.now().unixtime()+10800;
-    tempString += ",\"";
+    tempString += ts;
+    tempString += "000";
+    tempString += ",\"values\":{\"";
     tempString += "MCT";
     tempString += "\":";
     tempString += tempValue ;
@@ -72,7 +76,7 @@ String BuildMQTTString(DateTime myTimeStamp, float Temperature, float Humidity)
     tempString += "MCH";
     tempString += "\":";
     tempString += humValue ;
-    tempString += "}";
+    tempString += "}}";
     
 
 

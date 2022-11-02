@@ -10,13 +10,6 @@ Modifier les paramètre WIFI pour le réseau auquels votre objets doit se branch
 */
 
 
-// Uncoment to use home network
-/*
-    #define WIFI_SECRET_SSID "LeCamping"
-    #define WIFI_SECRET_USER ""
-    #define WIFI_SECRET_PASS "Summer2019"
-    #define SECRET_MQTT_SERVER_IP "192.168.2.175"
-*/
 
 //  Uncoment to use IDO open network
 /*
@@ -29,18 +22,18 @@ Modifier les paramètre WIFI pour le réseau auquels votre objets doit se branch
 
 //  Uncoment to use IDO open network
 /*
-    #define WIFI_SECRET_SSID "IDO2"
+    #define WIFI_SECRET_SSID "UNIFI_IDO2"
     #define WIFI_SECRET_USER ""
     #define WIFI_SECRET_PASS "99Bidules!"
-    #define SECRET_MQTT_SERVER_IP "192.168.1.99"
+    #define SECRET_MQTT_SERVER_IP "192.168.2.99"
 */
 
 //  Uncoment to use demo open network
 
-    #define WIFI_SECRET_SSID "IDO"
+    #define WIFI_SECRET_SSID "UNIFI_IDO2"
     #define WIFI_SECRET_USER ""
     #define WIFI_SECRET_PASS "99Bidules!"
-    #define SECRET_MQTT_SERVER_IP "192.168.1.199"
+    #define SECRET_MQTT_SERVER_IP "192.168.2.199"
 
 
 
@@ -72,8 +65,8 @@ Détails sur l'indentification de l'objet
 Cette information provient de l'objet virtuel créer sur le serveur Thingsbord
 */
 
-#define SECRET_TOKEN  "LTItHGlyBzLOcTN7YW4L"
-#define SECRET_DEVICE_ID "9ca499e0-5460-11ed-992b-e996175a5d43"
+#define SECRET_TOKEN  "k757XJPZPIe3U8IESYOf"
+#define SECRET_DEVICE_ID "d0506be0-53b9-11ed-b494-4f4188a2b7b4"
 
 
 

@@ -40,7 +40,7 @@ Modifier les paramètre WIFI pour le réseau auquels votre objets doit se branch
     #define WIFI_SECRET_SSID "IDO"
     #define WIFI_SECRET_USER ""
     #define WIFI_SECRET_PASS "99Bidules!"
-    #define SECRET_MQTT_SERVER_IP "192.168.1.199"
+    #define SECRET_MQTT_SERVER_IP "192.168.1.99"
 
 
 
@@ -72,8 +72,8 @@ Détails sur l'indentification de l'objet
 Cette information provient de l'objet virtuel créer sur le serveur Thingsbord
 */
 
-#define SECRET_TOKEN  "LTItHGlyBzLOcTN7YW4L"
-#define SECRET_DEVICE_ID "9ca499e0-5460-11ed-992b-e996175a5d43"
+#define SECRET_TOKEN  "OkKpRZxofGeXGnPtqPuf"
+#define SECRET_DEVICE_ID "3d2039f0-4409-11ed-9169-1b4f89b20433"
 
 
 
